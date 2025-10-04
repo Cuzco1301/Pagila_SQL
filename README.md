@@ -36,6 +36,8 @@ View the complete SQL Script: sql_scripts/category_largest_rentals.sql
 Conclusion: The analysis reveals that the Sports category is the top performer, indicating that the purchasing strategy should prioritize this genre. The overall performance of all categories is shown in the ranking below.
 
 Visualization:
+Visualization:
+![Category Ranking Bar Chart](visualizations/category_largest_rentals.png) 
 
 Data Transparency:
 The complete ranking of all 16 categories used for this visualization is available for verification in the file data/category_largest_rentals.csv accompanying this repository.
