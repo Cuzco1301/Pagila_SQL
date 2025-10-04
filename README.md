@@ -41,4 +41,4 @@ Visualization:
 ![Category Ranking Bar Chart](visualizations/category_largest_rentals.png) 
 
 Data Transparency:
-The complete ranking of all 16 categories used for this visualization is available for verification in the file data/category_largest_rentals.csv accompanying this repository.
+The complete ranking of all 16 categories used for this visualization is available for verification in the file [data/category_largest_rentals.csv](./data/category_largest_rentals.csv) accompanying this repository.
