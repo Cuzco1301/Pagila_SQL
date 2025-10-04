@@ -29,7 +29,7 @@ GROUP BY
     c.name
 ORDER BY
     total_rentals DESC;
-
+```
 View the complete SQL Script: sql_scripts/category_largest_rentals.sql
 
 4. Conclusion and Visualization
