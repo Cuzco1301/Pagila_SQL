@@ -29,6 +29,8 @@ ORDER BY
     total_rentals DESC;
    
 4. Conclusion and Visualization
-Conclusion: The analysis reveals that the Sports category is the top performer, indicating that the purchasing strategy should prioritize this genre. The overall performance of all categories is shown in the ranking below.
+Conclusion: The analysis reveals that the Sports category is the top performer, indicating that the purchasing strategy should prioritize this genre. 
 
 Visualization:
+category with the largest number of rented movies.png
+Data Transparency: Because the visualization is a static image (PNG/PDF), the entire list of high-priced documentary films cannot be fully displayed. The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/case_2_documentary_films.csv accompanying this repository.
