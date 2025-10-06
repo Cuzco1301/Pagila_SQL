@@ -70,7 +70,7 @@ WHERE
     c.name='Documentary' AND f.rental_rate >= 2.99
 ORDER BY
     rental_price DESC;
-
+```
 ### 4. Conclusion and Visualization
 **Conclusion**: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
 
