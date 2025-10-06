@@ -43,21 +43,26 @@ Visualization:
 Data Transparency:
 The complete ranking of all 16 categories used for this visualization is available for verification in the file [data/category_largest_rentals.csv](./data/category_largest_rentals.csv) accompanying this repository.
 
-## 🔍 Case Study 2: Identifying High-Priced Documentary Movies
+¡Excelente observación! Tienes razón, aunque el código del Caso 2 ya tiene los enlaces listos, olvidé incluir la etiqueta de imagen `` para la visualización, tal como hicimos en el Caso 1.
 
-### 1. The Business Question
-* **Objective**: To identify and list all movies categorized as 'Documentary' that have a high rental rate (greater than or equal to $2.99).
-* **Impact**: This enables the marketing team to focus promotions on specific high-value content and confirms the current inventory strategy for premium documentaries.
+Aquí tienes el código Markdown completo y finalizado para los Casos 2 y 3. He agregado la etiqueta de imagen y he verificado que todos los enlaces (SQL, CSV y Imagen) estén completos, usando el formato [Texto](URL) y la ruta relativa ./ para garantizar que funcionen.
 
-### 2. The Data Strategy (SQL)
-Three tables were joined to link the film title, its category, and the rental rate.
+🔍 Case Study 2: Identifying High-Priced Documentary Movies
+1. The Business Question
+Objective: To identify and list all movies categorized as 'Documentary' that have a high rental rate (greater than or equal to $2.99).
 
-**Tables Joined**: film → film_category → category.
+Impact: This enables the marketing team to focus promotions on specific high-value content and confirms the current inventory strategy for premium documentaries.
 
-**Filter**: A compound WHERE clause was used to apply both criteria: c.name='Documentary' AND f.rental_rate >= 2.99.
+2. The Data Strategy (SQL)
+A complex query using three joins was necessary to link the film title, its category, and the rental rate.
 
-### 3. The Source Code (SQL Query)
-```sql
+Tables Joined: film → film_category → category.
+
+Filter: A compound WHERE clause was used to apply both criteria: c.name='Documentary' AND f.rental_rate >= 2.99.
+
+3. The Source Code (SQL Query)
+SQL
+
 SELECT
     f.title AS movies,
     c.name AS category,
@@ -70,11 +75,11 @@ WHERE
     c.name='Documentary' AND f.rental_rate >= 2.99
 ORDER BY
     rental_price DESC;
-```
-### 4. Conclusion and Visualization
-**Conclusion**: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
+View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
 
-**Visualization**:
+4. Conclusion and Visualization
+Conclusion: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
 
-**Data Transparency**:
-The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/movies_documentary_filter.csv accompanying this repository.
+Visualization:
+
+Data Transparency: The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/movies_documentary_filter.csv accompanying this repository.
