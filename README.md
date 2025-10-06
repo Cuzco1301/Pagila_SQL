@@ -42,3 +42,41 @@ Visualization:
 
 Data Transparency:
 The complete ranking of all 16 categories used for this visualization is available for verification in the file [data/category_largest_rentals.csv](./data/category_largest_rentals.csv) accompanying this repository.
+
+## 🔍 Case Study 2: Identifying High-Priced Documentary Movies
+
+### 1. The Business Question
+* **Objective**: To identify and list all movies categorized as 'Documentary' that have a high rental rate (greater than or equal to $2.99).
+* **Impact**: This enables the marketing team to focus promotions on specific high-value content and confirms the current inventory strategy for premium documentaries.
+
+### 2. The Data Strategy (SQL)
+Three tables were joined to link the film title, its category, and the rental rate.
+
+**Tables Joined**: film → film_category → category.
+
+**Filter**: A compound WHERE clause was used to apply both criteria: c.name='Documentary' AND f.rental_rate >= 2.99.
+
+### 3. The Source Code (SQL Query)
+SQL
+
+SELECT
+    f.title AS movies,
+    c.name AS category,
+    f.rental_rate AS rental_price
+FROM
+    film AS f
+JOIN film_category AS fc USING (film_id)
+JOIN category AS c USING (category_id)
+WHERE
+    c.name='Documentary' AND f.rental_rate >= 2.99
+ORDER BY
+    rental_price DESC;
+View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
+
+### 4. Conclusion and Visualization
+**Conclusion**: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
+
+**Visualization**:
+
+**Data Transparency**:
+The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/movies_documentary_filter.csv accompanying this repository.
