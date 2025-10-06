@@ -18,17 +18,17 @@ A complex query using four JOINs was necessary to link the rental events with th
 ### 3. The Source Code (SQL Query)
 ```sql
 SELECT
-    c.name AS category_name,
-    COUNT(r.rental_id) AS total_rentals
+    f.title AS movies,
+    c.name AS category,
+    f.rental_rate AS rental_price
 FROM
-    category AS c
-JOIN film_category AS fc USING (category_id)
-JOIN inventory AS i USING (film_id)
-JOIN rental AS r USING (inventory_id)
-GROUP BY
-    c.name
+    film AS f
+JOIN film_category AS fc USING (film_id)
+JOIN category AS c USING (category_id)
+WHERE
+    c.name='Documentary' AND f.rental_rate >= 2.99
 ORDER BY
-    total_rentals DESC;
+    rental_price DESC;
 ```
 **View the complete SQL Script:** [sql_scripts/category_largest_rentals.sql](./sql_scripts/category_largest_rentals.sql)
 
