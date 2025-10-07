@@ -1,12 +1,16 @@
 --movies with their category and rental price
-select f.title as movies, c.name as category, f.rental_rate as rental_price
-from 
-film as f
-join 
-film_category as fc using (film_id)
-join 
-category as c using (category_id)
-where c.name='Documentary' and rental_rate>=2.99
-order by rental_rate desc;
+SELECT
+    f.title AS movies,
+    c.name AS category,
+    f.rental_rate AS rental_price
+FROM
+    film AS f
+JOIN film_category AS fc USING (film_id)
+JOIN category AS c USING (category_id)
+WHERE
+    c.name='Documentary' AND f.rental_rate >= 2.99
+ORDER BY
+    rental_price DESC;
+
 
 
