@@ -78,5 +78,7 @@ View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
 **Conclusion**: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
 
 **Visualization**:
+
 ![Documentary Movies Table and Card](visualizations/movies_documentary_filter.png)
+
 **Data Transparency**: The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/movies_documentary_filter.csv accompanying this repository.
