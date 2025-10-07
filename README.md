@@ -72,8 +72,9 @@ WHERE
     c.name='Documentary' AND f.rental_rate >= 2.99
 ORDER BY
     rental_price DESC;
-View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
 ```
+View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
+
 ### 4. Conclusion and Visualization
 **Conclusion**: The maximum rental rate for films in this filtered segment is $4.99. The visual confirms the precise list of high-value titles and highlights the uniformity of pricing within this category.
 
