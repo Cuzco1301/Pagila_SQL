@@ -8,6 +8,7 @@ Este repositorio contiene tres casos de estudio que demuestran la habilidad para
 
 ### 1. The Business Question
 **Objective:** To determine which movie category generates the highest number of rental events to prioritize inventory purchasing.
+
 **Impact:** This result guides management in inventory optimization and purchasing strategy to maximize Return on Investment (ROI).
 
 ### 2. The Data Strategy (SQL)
@@ -18,17 +19,18 @@ A complex query using four JOINs was necessary to link the rental events with th
 ### 3. The Source Code (SQL Query)
 ```sql
 SELECT
-    f.title AS movies,
-    c.name AS category,
-    f.rental_rate AS rental_price
+    c.name AS category_name,
+    COUNT(r.rental_id) AS total_rentals
 FROM
-    film AS f
-JOIN film_category AS fc USING (film_id)
-JOIN category AS c USING (category_id)
-WHERE
-    c.name='Documentary' AND f.rental_rate >= 2.99
+    category AS c
+JOIN film_category AS fc USING (category_id)
+JOIN film AS f USING (film_id)
+JOIN inventory AS i USING (film_id)
+JOIN rental AS r USING (inventory_id)
+GROUP BY
+    c.name
 ORDER BY
-    rental_price DESC;
+    total_rentals DESC;
 ```
 **View the complete SQL Script:** [sql_scripts/category_largest_rentals.sql](./sql_scripts/category_largest_rentals.sql)
 
