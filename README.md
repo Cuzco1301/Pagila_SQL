@@ -118,7 +118,7 @@ HAVING
 ORDER BY
     total_spent DESC;
 ```
-View the complete SQL Script: [sql_scripts/customers_high_value.sql](**./sql_scripts/customers_high_value.sql**)
+View the complete SQL Script: [sql_scripts/customers_high_value.sql](./sql_scripts/customers_high_value.sql)
 
 ### Conclusion and Visualization
 
@@ -126,6 +126,6 @@ View the complete SQL Script: [sql_scripts/customers_high_value.sql](**./sql_scr
 The customer with the highest total spending is Karl Seal, with a total expenditure of $108.67. The analysis identifies 395 high-value customers, ranked by their total accumulated spending.
 
 **Visualization**:
-![High-Value Customer Ranking](**visualizations/customers_high_value.png**)
+![High-Value Customer Ranking](./visualizations/customers_high_value.png)
 **Data Transparency**:
-The complete list of all high-value customers identified in this analysis is available for verification in the file [data/customers_high_value.csv](**./data/customers_high_value.csv**) accompanying this repository.
+The complete list of all high-value customers identified in this analysis is available for verification in the file [data/customers_high_value.csv](./data/customers_high_value.csv) accompanying this repository.
