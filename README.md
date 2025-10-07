@@ -79,5 +79,4 @@ View the complete SQL Script: sql_scripts/movies_documentary_filter.sql
 
 **Visualization**:
 ![Documentary Movies Table and Card](visualizations/movies_documentary_filter.png)
-
 **Data Transparency**: The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file data/movies_documentary_filter.csv accompanying this repository.
