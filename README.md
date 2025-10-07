@@ -1,6 +1,6 @@
-# Portafolio de Análisis SQL - Base de Datos Pagila
+# SQL Analysis Portfolio - Pagila Database
 
-Este repositorio contiene tres casos de estudio que demuestran la habilidad para traducir preguntas de negocio a consultas SQL complejas y visualizaciones de Power BI.
+This repository contains three case studies that demonstrate the ability to translate business questions into complex SQL queries and Power BI visualizations.
 
 ---
 
