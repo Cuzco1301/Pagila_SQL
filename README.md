@@ -4,7 +4,7 @@ Este repositorio contiene tres casos de estudio que demuestran la habilidad para
 
 ---
 
-## 📊 Caso de Estudio 1: Category Ranking by Total Rentals
+## 📊 Case Study 1: Category Ranking by Total Rentals
 
 ### 1. The Business Question
 **Objective:** To determine which movie category generates the highest number of rental events to prioritize inventory purchasing.
@@ -86,7 +86,7 @@ ORDER BY
 
 **Data Transparency**: The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file [data/movies_documentary_filter.csv](./data/movies_documentary_filter.csv) accompanying this repository.
 
-## 💰 Caso de Estudio 3: High-Value Customer Ranking by Total Spending
+## 💰 Case Study 3: High-Value Customer Ranking by Total Spending
 
 ### 1. The Business Question
 **Objective**: To identify customers who have spent more than $100 in total.
