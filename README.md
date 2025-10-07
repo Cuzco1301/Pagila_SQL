@@ -85,3 +85,47 @@ ORDER BY
 ![Documentary Movies Table and Card](visualizations/movies_documentary_filter.png)
 
 **Data Transparency**: The complete dataset, which includes the exact listing of all films that meet the criteria, is available for verification in the file [data/movies_documentary_filter.csv](./data/movies_documentary_filter.csv) accompanying this repository.
+
+## 💰 Caso de Estudio 3: High-Value Customer Ranking by Total Spending
+
+### 1. The Business Question
+**Objective**: To identify customers who have spent more than $100 in total.
+
+**Impact**: This enables the retention team to prioritize these "high-value customers" (HVCs) for exclusive loyalty programs and tailored offers.
+
+### 2. The Data Strategy (SQL)
+This analysis required aggregating payment data and applying a filter directly to that aggregated result:
+
+* **Tables Joined**: customer → payment.
+
+* **Aggregation**: The SUM(amount) function was used to calculate the total amount spent by each customer.
+
+* **Filter on Aggregate**: The HAVING clause (HAVING SUM(amount) > 100) was used to filter the grouped results.
+
+### 3. The Source Code (SQL Query)
+```sql
+SELECT
+    c.first_name || ' ' || c.last_name AS full_name,
+    SUM(amount) AS total_spent
+FROM
+    customer AS c
+JOIN
+    payment AS p USING (customer_id)
+GROUP BY
+    c.customer_id, full_name
+HAVING
+    SUM(amount) > 100
+ORDER BY
+    total_spent DESC;
+```
+View the complete SQL Script: sql_scripts/customers_high_value.sql
+
+### Conclusion and Visualization
+
+**Conclusion**:
+The customer with the highest total spending is Karl Seal, with a total expenditure of $108.67. The analysis identifies 395 high-value customers, ranked by their total accumulated spending.
+
+**Visualization**:
+
+**Data Transparency**:
+The complete list of all high-value customers identified in this analysis is available for verification in the file data/customers_high_value.csv accompanying this repository.
